@@ -1,0 +1,31 @@
+.container {
+    margin: 3%;
+}
+
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: auto;
+  }
+
+.btnAccion {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.detalle{
+    color: rgb(13, 71, 148);
+}
+.editar{
+    color: rgb(6, 98, 30);
+}
+.eliminar{
+    color: rgb(122, 9, 9);
+}

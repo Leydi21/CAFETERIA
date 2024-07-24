@@ -1,0 +1,30 @@
+<mat-card class="card">
+  <!-- <h4>#{{dataUsuarios.id}}</h4> -->
+  <mat-card-header>
+    <!-- <img alt="dataUsuarios-image" class="" [src]="dataUsuarios.avatar" width="100px" height="100px"> -->
+      @if(dataUsuarios.rol == 'Administrador'){
+        <img alt="dataUsuarios-image" class="" src="../../../../assets/images/admin.png" width="70px" height="70px">
+      } @else {
+        <img alt="dataUsuarios-image" class="" src="../../../../assets/images/1053244.png" width="70px" height="70px">
+      }
+  <!-- <mat-icon style="width: 100px; height: 100px;" matListItemIcon>storefront</mat-icon> -->
+    <mat-card-title-group style="margin-left: 2%;">
+      <mat-card-title>{{dataUsuarios.nombre}} {{dataUsuarios.apellidoPaterno}} {{dataUsuarios.apelliodMaterno}}</mat-card-title>
+      <mat-card-subtitle>{{dataUsuarios.rol}}</mat-card-subtitle>
+    </mat-card-title-group>
+    <mat-card-title-group>
+      <mat-icon style="cursor: pointer;" matListItemIcon>edit</mat-icon>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <span>Telefono: {{dataUsuarios.telefono}}</span><br>
+    <span>Email: {{dataUsuarios.email}}</span><br>
+    <span>Fecha de Nacimiento: {{dataUsuarios.fechaNacimiento | date: 'longDate' }}  Edad: {{dataUsuarios.edad}}</span><br>
+    <span>Direccion: {{dataUsuarios.email}}</span><br>
+    <!-- <span>Ingreso: {{dataUsuarios.fechaAlta | date}}</span> -->
+  </mat-card-content>
+  <mat-card-footer style="text-align: end; font-size: 12px;">
+      <br>
+      Actualización: {{dataUsuarios.fechaAlta | date: 'longDate' }}
+  </mat-card-footer>
+</mat-card>

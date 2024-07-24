@@ -1,0 +1,7 @@
+<div style="flex-direction: row;margin: 5%;">
+  @if(data){
+    @for (product of data; track product.id){
+      <app-card [product]="product"></app-card>
+    }
+  }
+</div>

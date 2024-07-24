@@ -1,0 +1,54 @@
+.container {
+    height: 200%;
+  }
+  
+  .drawer {
+    width: 15%;
+    // background-color: rgb(165, 147, 125);
+    background-image: url("../assets/images/wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+    @media (max-width: 768px) {
+      width: 50%;
+    }
+    @media (max-width: 480px) {
+      width: 75%;
+    }
+  }
+
+  .toolbar {
+    background-image: url("../assets/images/wallpaper.jpg");
+    background-size: cover;
+    // background-position: center;
+    align-content: center;
+  }
+  
+  .logo {
+    width: 100%;
+    max-width: 150px;
+  }
+  
+  .pages {
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .pages:hover {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .drawer-content {
+    margin: 3%;
+    @media (max-width: 768px) {
+      margin: 2%;
+    }
+    @media (max-width: 480px) {
+      margin: 1%;
+    }
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }

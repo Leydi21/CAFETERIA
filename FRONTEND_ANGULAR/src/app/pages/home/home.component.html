@@ -1,0 +1,21 @@
+<div class="dashboard-container">
+  <h1>Ingresos y Gastos</h1>
+  <mat-button-toggle-group [(ngModel)]="viewMode" aria-label="View mode" (change)="onViewModeChange()">
+    <mat-button-toggle value="monthly">Mensual</mat-button-toggle>
+    <mat-button-toggle value="weekly">Semanal</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <div class="chart-container">
+    <h2>{{ viewMode === 'monthly' ? 'Ingresos Mensuales' : 'Ingresos Semanales' }}</h2>
+    <div class="chart">
+      <canvas id="chart"></canvas>
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <h2>{{ viewMode === 'monthly' ? 'Gastos Mensuales' : 'Gastos Semanales' }}</h2>
+    <div class="chart">
+      <canvas id="chartPie"></canvas>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<mat-card class="card">
+    <!-- <h4>#{{product.id}}</h4> -->
+    <mat-card-header>
+      <!-- <img alt="product-image" class="" src="../../../../assets/images/coffeDefault.jpg" width="150px" style="margin: 5px;"> -->
+      <img alt="product-image" class="" [src]="product.imagen" width="200px" height="150px" style="margin: 5px;">
+      <mat-card-title-group>
+        <mat-card-title>{{product.nombre}} {{product.tamanio}}
+        </mat-card-title>
+        <mat-card-subtitle>sabor: {{product.sabor}}</mat-card-subtitle><br>
+        <mat-card-subtitle>{{product.descripcion}}</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+    </mat-card-content>
+    <mat-card-footer style="text-align: center; font-weight: lighter;">
+        <br>
+        $ {{product.precio}}
+    </mat-card-footer>
+  </mat-card>

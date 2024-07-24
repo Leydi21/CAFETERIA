@@ -1,0 +1,11 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+  }
+  
+  app-card {
+    flex: 1 1 calc(50% - 10px); /* Espacio ajustado entre los elementos */
+    box-sizing: border-box; /* Para incluir el padding y border en el tamaño total */
+  }
+  

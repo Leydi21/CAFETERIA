@@ -1,0 +1,11 @@
+<div style="flex-direction: row;margin: 5%;">
+  @if(showLoading==true){
+    <mat-spinner style="width: 50%;"></mat-spinner>
+  }
+  @if(dataUsuarios){
+    @for (usuario of dataUsuarios; track usuario.id){
+      <app-card-users [dataUsuarios]="usuario"></app-card-users>
+    }
+  }
+</div>
+  

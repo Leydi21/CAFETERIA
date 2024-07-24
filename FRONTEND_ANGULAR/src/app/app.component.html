@@ -1,0 +1,51 @@
+
+<mat-toolbar class="toolbar">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="toggleDrawer()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  @if(showToggle){
+    <img src="../assets/images/logo.png" style="width: 5%;"/>
+  }
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>person</mat-icon>
+  </button>
+  <span>Leydi</span>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+<mat-drawer-container class="container">
+  <mat-drawer mode="side" #drawer class="drawer" opened="true">
+    <mat-list>
+      <div mat-subheader>
+        <img src="../assets/images/logo.png" class="logo"/>
+      </div>
+      <mat-list-item>
+        <mat-icon matListItemIcon>home</mat-icon>
+        <div class="pages" routerLink="/" matListItemTitle>Inicio</div>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon>person</mat-icon>
+        <div class="pages" routerLink="/usuarios" matListItemTitle>Usuarios</div>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon>local_cafe</mat-icon>
+        <div class="pages" routerLink="/productos" matListItemTitle>Productos</div>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon>storefront</mat-icon>
+        <div class="pages" routerLink="/compras" matListItemTitle>Compras</div>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon>point_of_sale</mat-icon>
+        <div class="pages" routerLink="/ventas" matListItemTitle>Ventas</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet class="drawer-content"></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
