@@ -12,4 +12,8 @@ export class ProductosService {
   getAllProducts():Observable<any>{
     return this._http.get('https://localhost:7154/api/Productos')
   }
+
+  getAllTypeProducts():Observable<any>{
+    return this._http.get('https://localhost:7154/api/TipoProducto')
+  }
 }

@@ -1,4 +1,8 @@
-<div style="flex-direction: row;margin: 5%;">
+<button style="margin-top: 2%; color:white; background-color: rgb(9, 94, 39);" mat-raised-button
+  (click)="altaProducto()">
+  <mat-icon>local_cafe</mat-icon> Alta de Producto</button>
+<div class="card-container">
+
   @if(data){
     @for (product of data; track product.id){
       <app-card [product]="product"></app-card>

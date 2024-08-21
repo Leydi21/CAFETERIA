@@ -1,11 +1,13 @@
 .dashboard-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row; /* Cambiado de column a row */
+  justify-content: space-between; /* Asegura que haya espacio entre los elementos */
+  align-items: flex-start; /* Ajusta la alineación vertical según sea necesario */
+  width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho */
 }
 
 .chart-container {
-  width: 50%;
+  width: 48%; /* Ajusta a 48% para dejar espacio para el margen entre gráficos */
   margin-bottom: 20px;
 }
 
